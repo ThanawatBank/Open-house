@@ -2,25 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster01 : MonoBehaviour
+public class BulletMonster : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private float distance = 5f;
-    [SerializeField] private float speedmonster = 3f;
+    [SerializeField] private float speedBullet = 15f;
+    [SerializeField] private Rigidbody2D rg2d;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        rg2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) < distance)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedmonster * Time.deltaTime);
-        }
-        
+        rg2d.velocity = transform.right * speedBullet;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -28,6 +23,15 @@ public class Monster01 : MonoBehaviour
         {
             PlayerHP playerHP = collision.gameObject.GetComponent<PlayerHP>();
             playerHP.PlayerDecreaseHP();
+            Destroy(gameObject);
         }
+        if (collision.collider.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

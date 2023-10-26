@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    
     [SerializeField] private float speedBullet = 15f;
     [SerializeField] private Rigidbody2D rg2d;
     // Start is called before the first frame update
@@ -21,7 +22,13 @@ public class Bullet : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy")
         {
-            Destroy( collision.gameObject);
+            MonsterHP hp = collision.gameObject.GetComponent<MonsterHP>();
+            hp.DecreaseHP();
+            Destroy(gameObject);
+        }
+        if (collision.collider.tag == "Wall")
+        {
+            Destroy(gameObject);
         }
     }
     private void OnBecameInvisible()
