@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMonster : MonoBehaviour
 {
-    [SerializeField] private float speedBullet = 15f;
+    [SerializeField] private float speedBullet =5f;
     [SerializeField] private Rigidbody2D rg2d;
     // Start is called before the first frame update
     void Start()

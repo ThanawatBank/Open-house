@@ -7,9 +7,9 @@ public class PlayerHP : MonoBehaviour
     private SpriteRenderer colorChange;
 
     [SerializeField] private int playerHP = 10;
-    [SerializeField] private int maxHP = 100;
+    [SerializeField] private int maxHP = 10;
 
-    [SerializeField] private Vector3 respawnPiont;
+    public Vector3 respawnPiont;
     private float countDownColorChange;
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class PlayerHP : MonoBehaviour
 
         if (countDownColorChange > 1)
         {
-            colorChange.color = Color.green;
+            colorChange.color = Color.white;
         }
     }
     
@@ -42,5 +42,11 @@ public class PlayerHP : MonoBehaviour
         playerHP -= 1;
         colorChange.color = Color.red;
         countDownColorChange = 0;
+    }
+
+    public void ReSpawmPoint()
+    {
+        
+
     }
 }
