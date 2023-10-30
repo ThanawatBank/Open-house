@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8085652591698120347}
   m_Layer: 7
   m_Name: MonsterBullet
-  m_TagString: Untagged
+  m_TagString: BulletMonster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9009883198708652349}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &9009883198708652338
 CircleCollider2D:
   m_ObjectHideFlags: 0

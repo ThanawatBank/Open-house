@@ -11,7 +11,7 @@ public class Goal : MonoBehaviour
         {
 
             Debug.Log("Yeah");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
 
         }
     }

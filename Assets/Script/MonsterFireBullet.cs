@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterFireBullet : MonoBehaviour
 {
+    [SerializeField] private Rigidbody rg2d;
     [SerializeField] private GameObject player;
     [SerializeField] private float distance = 7f;
     [SerializeField] private float speedmonster = 1f;
@@ -24,6 +25,7 @@ public class MonsterFireBullet : MonoBehaviour
         fireDistance = 10;
        
         player = GameObject.FindWithTag("Player");
+        rg2d =GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,17 @@ public class MonsterFireBullet : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, transform.position) < distance)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedmonster * Time.deltaTime);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, (player.transform.position - transform.position).normalized, distance);
+            if (hit.collider != null && hit.collider.CompareTag("Wall"))
+            {
+                // ถ้ามีการชนกับ Wall, หยุดการเคลื่อนที่
+                rg2d.velocity = Vector2.zero;
+            }
+            else
+            {
+                // ไม่มีการชนกับ Wall, เคลื่อนที่ไปหา Player
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedmonster * Time.deltaTime);
+            }
         }
 
 

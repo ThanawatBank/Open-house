@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 24
   m_Sprite: {fileID: 333193405, guid: e79a9f706e8f52f43a73d480d62ead49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2779867466797142163}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.4}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &2779867466797142174
 MonoBehaviour:
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41902259d04b83544a672824dcf158e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rg2d: {fileID: 0}
   player: {fileID: 0}
   distance: 5
   speedmonster: 3

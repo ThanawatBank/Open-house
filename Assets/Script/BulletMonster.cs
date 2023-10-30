@@ -29,6 +29,10 @@ public class BulletMonster : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(collision.collider.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+        }
     }
     private void OnBecameInvisible()
     {

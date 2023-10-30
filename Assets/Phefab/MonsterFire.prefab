@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 24
   m_Sprite: {fileID: 1803374593, guid: e79a9f706e8f52f43a73d480d62ead49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351277da5132dd94398c3c3fec849e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rg2d: {fileID: 0}
   player: {fileID: 0}
   distance: 7
   speedmonster: 1
@@ -155,7 +156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &-4591532241964863789
 MonoBehaviour:
