@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left
+      name: LeftFloor
       rect:
         serializedVersion: 2
         x: 11
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right
+      name: RightFloor
       rect:
         serializedVersion: 2
         x: 75
@@ -220,9 +220,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Right: -660972335
       in: 839824283
-      Left: 747443957
+      LeftFloor: 747443957
+      RightFloor: -660972335
       Top: 410496661
       Under: 860270616
   spritePackingTag: 
