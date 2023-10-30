@@ -44,9 +44,8 @@ public class PlayerHP : MonoBehaviour
         countDownColorChange = 0;
     }
 
-    public void ReSpawmPoint()
+    public void increaseHP()
     {
-        
-
+        playerHP += 3;
     }
 }
